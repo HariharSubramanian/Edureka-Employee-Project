@@ -16,7 +16,7 @@
                     <th scope="col">Salary</th>
                     <th scope="col">DOB</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Action</th>        
+                    <!-- <th scope="col">Action</th>         -->
                 </tr>
             </thead>
             <tbody *ngFor="let val of employeesData">
@@ -69,7 +69,7 @@
                             <input type="text" class="form-control" [(ngModel)]="val.email" />
                         </div>
                     </td>
-                    <td>
+                    <!-- <td>
                         <div *ngIf="!showEdit">
                             <button type="button" class="btn btn-primary" (click)="EditEmp()">
                                 Edit
@@ -80,7 +80,7 @@
                                 Update
                             </button>
                         </div>
-                    </td>
+                    </td> -->
                 </tr>
             </tbody>
         </table>
