@@ -1,0 +1,88 @@
+<div class="row">
+    <div class="col-12">
+        <h1>
+            {{tableName}}
+        </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">Employee ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">DOB</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Action</th>        
+                </tr>
+            </thead>
+            <tbody *ngFor="let val of employeesData">
+                <tr>
+                    <td>
+                        <div *ngIf="!showEdit">
+                            {{val.empId}}
+                        </div>
+                        <div *ngIf="showEdit">
+                            <input type="text" class="form-control" [(ngModel)]="val.empId" />
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="!showEdit">
+                            {{val.firstName}}
+                        </div>
+                        <div *ngIf="showEdit">
+                            <input type="text" class="form-control" [(ngModel)]="val.firstName" />
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="!showEdit">
+                            {{val.lastName}}
+                        </div>
+                        <div *ngIf="showEdit">
+                            <input type="text" class="form-control" [(ngModel)]="val.lastName" />
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="!showEdit">
+                            {{val.salary}}
+                        </div>
+                        <div *ngIf="showEdit">
+                            <input type="text" class="form-control" [(ngModel)]="val.salary" />
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="!showEdit">
+                            {{val.dob}}
+                        </div>
+                        <div *ngIf="showEdit">
+                            <input type="text" class="form-control" [(ngModel)]="val.dob" />
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="!showEdit">
+                            {{val.email}}
+                        </div>
+                        <div *ngIf="showEdit">
+                            <input type="text" class="form-control" [(ngModel)]="val.email" />
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="!showEdit">
+                            <button type="button" class="btn btn-primary" (click)="EditEmp()">
+                                Edit
+                            </button>
+                        </div>
+                        <div *ngIf="showEdit">
+                            <button type="button" class="btn btn-primary" (click)="UpdateEmp()">
+                                Update
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
