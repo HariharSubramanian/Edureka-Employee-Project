@@ -31,10 +31,10 @@
                         {{val.lastName}}
                     </td>
                     <td>
-                        {{val.salary}}
+                        {{val.salary | currency}}
                     </td>
                     <td>
-                        {{val.dob}}
+                        {{val.dob | date : 'mediumDate' | uppercase}}
                         </td>
                     <td>
                         {{val.email}}
