@@ -19,68 +19,26 @@
                     <!-- <th scope="col">Action</th>         -->
                 </tr>
             </thead>
-            <tbody *ngFor="let val of employeesData">
+            <tbody *ngFor="let val of employeesList" empdataColor>
                 <tr>
                     <td>
-                        <div *ngIf="!showEdit">
-                            {{val.empId}}
-                        </div>
-                        <div *ngIf="showEdit">
-                            <input type="text" class="form-control" [(ngModel)]="val.empId" />
-                        </div>
+                        {{val.empId}}
                     </td>
                     <td>
-                        <div *ngIf="!showEdit">
-                            {{val.firstName}}
-                        </div>
-                        <div *ngIf="showEdit">
-                            <input type="text" class="form-control" [(ngModel)]="val.firstName" />
-                        </div>
+                        {{val.firstName}}
                     </td>
                     <td>
-                        <div *ngIf="!showEdit">
-                            {{val.lastName}}
-                        </div>
-                        <div *ngIf="showEdit">
-                            <input type="text" class="form-control" [(ngModel)]="val.lastName" />
-                        </div>
+                        {{val.lastName}}
                     </td>
                     <td>
-                        <div *ngIf="!showEdit">
-                            {{val.salary}}
-                        </div>
-                        <div *ngIf="showEdit">
-                            <input type="text" class="form-control" [(ngModel)]="val.salary" />
-                        </div>
+                        {{val.salary}}
                     </td>
                     <td>
-                        <div *ngIf="!showEdit">
-                            {{val.dob}}
-                        </div>
-                        <div *ngIf="showEdit">
-                            <input type="text" class="form-control" [(ngModel)]="val.dob" />
-                        </div>
-                    </td>
+                        {{val.dob}}
+                        </td>
                     <td>
-                        <div *ngIf="!showEdit">
-                            {{val.email}}
-                        </div>
-                        <div *ngIf="showEdit">
-                            <input type="text" class="form-control" [(ngModel)]="val.email" />
-                        </div>
+                        {{val.email}}
                     </td>
-                    <!-- <td>
-                        <div *ngIf="!showEdit">
-                            <button type="button" class="btn btn-primary" (click)="EditEmp()">
-                                Edit
-                            </button>
-                        </div>
-                        <div *ngIf="showEdit">
-                            <button type="button" class="btn btn-primary" (click)="UpdateEmp()">
-                                Update
-                            </button>
-                        </div>
-                    </td> -->
                 </tr>
             </tbody>
         </table>

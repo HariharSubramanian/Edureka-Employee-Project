@@ -5,18 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EmptableComponent } from './components/emptable/emptable.component';
-import { FormsModule } from '@angular/forms';
+import { ColorDirective } from './directives/color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmptableComponent
+    EmptableComponent,
+    ColorDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
