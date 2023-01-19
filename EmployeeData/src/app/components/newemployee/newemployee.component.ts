@@ -11,7 +11,7 @@ import { NewEmployeeData } from './employee2';
 })
 export class NewemployeeComponent implements OnInit {
   public tableName="Employees data from API";
-  public empDataValues:Employee[]=[]
+  public empDataValues:NewEmployeeData[]=[];
   constructor(private newemp:NewEmpDataService){}
   ngOnInit():void{
     this.newemp.getEmpData().subscribe((response)=>{
