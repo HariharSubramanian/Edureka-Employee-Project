@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { EmpConfigServiceService } from './emp-config-service.service';
-import { Employee } from '../components/emptable/employee';
 import { NewEmployeeData } from '../components/newemployee/employee2';
 
 @Injectable({

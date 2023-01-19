@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmpConfigServiceService } from 'src/app/services/emp-config-service.service';
 import { NewEmpDataService } from 'src/app/services/new-emp-data.service';
-import { Employee } from '../emptable/employee';
 import { NewEmployeeData } from './employee2';
 
 @Component({
