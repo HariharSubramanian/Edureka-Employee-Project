@@ -13,7 +13,7 @@ export class NewemployeeComponent implements OnInit {
   constructor(private newemp:NewEmpDataService){}
   ngOnInit():void{
     this.newemp.getEmpData().subscribe((response)=>{
-      this.empDataValues=response;
+      this.empDataValues=response.data;
     })
   }
 }

@@ -11,7 +11,7 @@ export class NewEmpDataService {
   
   constructor(private http:HttpClient) { }
 
-  public getEmpData():Observable<NewEmployeeData[]>{
-    return this.http.get<NewEmployeeData[]>(this.EMP_DATA_API);
+  public getEmpData():Observable<any>{
+    return this.http.get<any>(this.EMP_DATA_API);
   }
 }
